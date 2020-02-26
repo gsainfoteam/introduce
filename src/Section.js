@@ -5,6 +5,7 @@ import RecruitForm from './RecruitForm';
 const Section = () => {
   return (
     <section>
+      <p>기사들을 담는 상자</p>
       <Article className="nas" />
       <Article className="gistory" />
       <Article className="facebook" />
