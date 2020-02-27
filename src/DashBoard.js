@@ -3,19 +3,17 @@ import clsx from 'clsx';
 import AppBar from '@material-ui/core/AppBar';
 import Box from '@material-ui/core/Box';
 import { makeStyles } from '@material-ui/core/styles';
-import { CssBaseline, Toolbar, IconButton } from '@material-ui/core';
+import { CssBaseline, Toolbar, IconButton, Button } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import ListSubheader from '@material-ui/core/ListSubheader';
 import Drawer from '@material-ui/core/Drawer';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
 
 import Footer from './Footer';
+import { firstListItems, secondListItems, thirdListItems } from './listItems';
 
 const drawerWidth = 240;
 
@@ -110,14 +108,23 @@ const DashBoard = () => {
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
   return (
-    <div className="{classes.root}">
+    <div className={classes.root}>
       <CssBaseline />
       <AppBar
         position="absolute"
         className={clsx(classes.appBar, open && classes.appBarShift)}
       >
         <Toolbar className={classes.toolbar}>
-          <IconButton onClick={handleDrawerOpen} edge="start" color="inherit">
+          <IconButton
+            edge="start"
+            color="inherit"
+            aria-label="open drawer"
+            onClick={handleDrawerOpen}
+            className={clsx(
+              classes.menuButton,
+              open && classes.menuButtonHidden,
+            )}
+          >
             <i className="material-icons">menu</i>
           </IconButton>
           <Typography
@@ -127,7 +134,7 @@ const DashBoard = () => {
             noWrap
             className={classes.title}
           >
-            GAS Infoteam
+            GSA Infoteam
           </Typography>
         </Toolbar>
       </AppBar>
@@ -138,45 +145,31 @@ const DashBoard = () => {
         }}
         open={open}
       >
-        <div className={classes.toolbarIcon} onClick={handleDrawerClose}>
-          <i class="material-icons">chevron_left</i>
+        <div className={classes.toolbarIcon}>
+          <IconButton onClick={handleDrawerClose}>
+            <i className="material-icons">menu</i>
+          </IconButton>
         </div>
         <Divider />
-        <List>
-          <ListItem button>
-            <ListItemIcon>
-              <i class="material-icons">apps</i>
-            </ListItemIcon>
-            <ListItemText primary="인포팀이란?" />
-          </ListItem>
-          <Divider />
-          <ListSubheader inset>인포팀에서 하는 일</ListSubheader>
-          <ListItem button>
-            <ListItemIcon>
-              <i class="material-icons">apps</i>
-            </ListItemIcon>
-            <ListItemText primary="NAS 관리" />
-          </ListItem>
-          <ListItem button>
-            <ListItemIcon>
-              <i class="material-icons">apps</i>
-            </ListItemIcon>
-            <ListItemText primary="커뮤니티 관리" />
-          </ListItem>
-        </List>
+        <List>{firstListItems}</List>
         <Divider />
-        <List></List>
+        <List>{secondListItems}</List>
+        <Divider />
+        <List>{thirdListItems}</List>
       </Drawer>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
           <Grid container spacing={3}>
-            {/* Chart */}
-            <Grid item xs={12} md={8} lg={9}></Grid>
-            {/* Recent Deposits */}
-            <Grid item xs={12} md={4} lg={3}></Grid>
-            {/* Recent Orders */}
-            <Grid item xs={12}></Grid>
+            <Grid item xs={12} md={8} lg={9}>
+              <Paper className={fixedHeightPaper}></Paper>
+            </Grid>
+            <Grid item xs={12} md={4} lg={3}>
+              <Paper className={fixedHeightPaper}></Paper>
+            </Grid>
+            <Grid item xs={12}>
+              <Paper className={classes.paper}></Paper>
+            </Grid>
           </Grid>
           <Box pt={4}>
             <Footer />
