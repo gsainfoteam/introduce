@@ -1,7 +1,16 @@
 import React from 'react';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
 
 const Footer = () => {
-  return <footer>Footer에는 어떤 내용을 넣을까?</footer>;
+  return (
+    <Box pt={4}>
+      <Typography variant="body2" color="textSecondary" align="center">
+        {'Copyright © '}GSA Infoteam {new Date().getFullYear()}
+        {'.'}
+      </Typography>
+    </Box>
+  );
 };
 
 export default Footer;
