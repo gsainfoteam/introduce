@@ -1,7 +1,7 @@
 {
   "name": "recruit",
   "homepage": "/",
-  "version": "0.1.0",
+  "version": "0.2.5",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.9.4",
@@ -20,7 +20,7 @@
     "cname": "echo recruit.gistory.me > build\\CNAME",
     "nojekyll": "echo > build\\.nojekyll",
     "predeploy": "npm run build && npm run cname && npm run nojekyll",
-    "deploy": "gh-pages --add --dotfiles -d build"
+    "deploy": "gh-pages --dotfiles -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
