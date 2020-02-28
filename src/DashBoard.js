@@ -13,6 +13,7 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 
 import Footer from './Footer';
+import Article from './Article';
 import { firstListItems, secondListItems, thirdListItems } from './listItems';
 
 const drawerWidth = 240;
@@ -162,13 +163,19 @@ const DashBoard = () => {
         <Container maxWidth="lg" className={classes.container}>
           <Grid container spacing={3}>
             <Grid item xs={12} md={8} lg={9}>
-              <Paper className={fixedHeightPaper}></Paper>
+              <Paper className={fixedHeightPaper}>
+                <Article />
+              </Paper>
             </Grid>
             <Grid item xs={12} md={4} lg={3}>
-              <Paper className={fixedHeightPaper}></Paper>
+              <Paper className={fixedHeightPaper}>
+                <Article />
+              </Paper>
             </Grid>
             <Grid item xs={12}>
-              <Paper className={classes.paper}></Paper>
+              <Paper className={classes.paper}>
+                <Article />
+              </Paper>
             </Grid>
           </Grid>
           <Box pt={4}>
