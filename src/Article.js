@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Article = () => {
-  return <article>기사가 들어갈 공간입니다. </article>;
-};
+export const firstArticle = <div></div>;
 
-export default Article;
+export const secondArticle = <div></div>;
+
+export const thirdArticle = <div></div>;
