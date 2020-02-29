@@ -64,7 +64,7 @@ export const thirdListItems = (
       <ListItemIcon>
         <i class="material-icons">help_outline</i>
       </ListItemIcon>
-      <ListItemText primary="문의사항" />
+      <ListItemText href="mailto:admin@gistory.me" primary="문의사항" />
     </ListItem>
   </div>
 );
