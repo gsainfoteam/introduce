@@ -4,6 +4,10 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListSubheader from '@material-ui/core/ListSubheader';
 
+function sendEmail() {
+  window.location = 'mailto:admin@gistory.me';
+}
+
 export const firstListItems = (
   <div>
     <ListItem button>
@@ -60,11 +64,11 @@ export const thirdListItems = (
       </ListItemIcon>
       <ListItemText primary="지원하기" />
     </ListItem>
-    <ListItem button>
+    <ListItem button onClick = {sendEmail}>
       <ListItemIcon>
         <i class="material-icons">help_outline</i>
       </ListItemIcon>
-      <ListItemText href="mailto:admin@gistory.me" primary="문의사항" />
+      <ListItemText primary="문의사항" />
     </ListItem>
   </div>
 );
