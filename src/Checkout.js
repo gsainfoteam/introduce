@@ -89,7 +89,7 @@ export default function Checkout() {
   };
 
   const nowUnderstand = () => {
-    setUnderstood(true);
+    setUnderstood(!understood);
     console.log('제대로 전달 됨?');
   };
 
