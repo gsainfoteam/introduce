@@ -49,21 +49,21 @@ const useStyles = makeStyles(theme => ({
 
 const steps = ['유의사항', '지원서 양식'];
 
-function getStepContent(step) {
-  switch (step) {
-    case 0:
-      return <AddressForm />;
-    case 1:
-      return <PaymentForm />;
-    default:
-      throw new Error('Unknown step');
-  }
-}
-
 export default function Checkout() {
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(0);
-  const [understood, setunderStood] = React.useState(true);
+  const [understood, setunderStood] = React.useState(false);
+
+  function getStepContent(step) {
+    switch (step) {
+      case 0:
+        return <AddressForm nowUnderstand={nowUnderstand} />;
+      case 1:
+        return <PaymentForm />;
+      default:
+        throw new Error('Unknown step');
+    }
+  }
 
   const sendMessage = () => {
     console.log('아직 미완성');
@@ -84,6 +84,11 @@ export default function Checkout() {
 
   const handleBack = () => {
     setActiveStep(activeStep - 1);
+  };
+
+  const nowUnderstand = () => {
+    setunderStood(!understood);
+    console.log('제대로 전달 됨?');
   };
 
   return (

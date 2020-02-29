@@ -4,11 +4,10 @@ import Typography from '@material-ui/core/Typography';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import ListSubheader from '@material-ui/core/ListSubheader';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 
-export default function AddressForm() {
+const AddressForm = props => {
   return (
     <>
       <Typography variant="h6" gutterBottom>
@@ -55,10 +54,18 @@ export default function AddressForm() {
       </ListItem>
       <Grid item xs={12}>
         <FormControlLabel
-          control={<Checkbox color="secondary" name="saveCard" value="yes" />}
+          control={
+            <Checkbox
+              color="secondary"
+              name="saveCard"
+              onClick={props.nowUnderstand}
+            />
+          }
           label="문행위/하우스/학생회와 공동지원이 불가능하다는 걸 이해했으며, 인포팀에 지원하겠습니다."
         />
       </Grid>
     </>
   );
-}
+};
+
+export default AddressForm;

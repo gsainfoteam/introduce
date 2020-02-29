@@ -2,8 +2,6 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
 
 export default function PaymentForm() {
   return (
@@ -27,8 +25,16 @@ export default function PaymentForm() {
         <Grid item xs={12}>
           <TextField
             multiline
-            id="cvv"
-            label="하고싶은 말 또는 개발경험이 있으면 적어주세요"
+            id="exp"
+            label="개발에 참여하신 경험이 있으시면 적어주세요"
+            fullWidth
+          />
+        </Grid>
+        <Grid item xs={12}>
+          <TextField
+            multiline
+            id="etc"
+            label="하고싶은 말있으시면 적어주세요"
             fullWidth
           />
         </Grid>
