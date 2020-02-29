@@ -52,7 +52,7 @@ const steps = ['유의사항', '지원서 양식'];
 export default function Checkout() {
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(0);
-  const [understood, setunderStood] = React.useState(false);
+  const [understood, setUnderstood] = React.useState(false);
 
   function getStepContent(step) {
     switch (step) {
@@ -79,15 +79,17 @@ export default function Checkout() {
   };
 
   const goBack = () => {
+    setUnderstood(false);
     setActiveStep(0);
   };
 
   const handleBack = () => {
+    setUnderstood(false);
     setActiveStep(activeStep - 1);
   };
 
   const nowUnderstand = () => {
-    setunderStood(!understood);
+    setUnderstood(true);
     console.log('제대로 전달 됨?');
   };
 
