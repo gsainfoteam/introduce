@@ -40,27 +40,8 @@ export default function PaymentForm() {
         <Grid item xs={12} md={6}>
           <TextField required id="studentNumber" label="학번" fullWidth />
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12}>
           <TextField required id="phone" label="휴대폰 번호" fullWidth />
-        </Grid>
-        <Grid item xs={6}>
-          <FormControl required error={error} component="fieldset">
-            <FormHelperText>지원 분야를 선택해주세요</FormHelperText>
-            <FormGroup row={true}>
-              <FormControlLabel
-                control={<Checkbox checked={frontend} value="frontend" />}
-                label="프런트엔드"
-              />
-              <FormControlLabel
-                control={<Checkbox checked={backend} value="backend" />}
-                label="백엔드"
-              />
-              <FormControlLabel
-                control={<Checkbox checked={design} value="design" />}
-                label="디자이너"
-              />
-            </FormGroup>
-          </FormControl>
         </Grid>
         <Grid item xs={12}>
           <TextField
