@@ -5,6 +5,8 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 
+const endpoint = 'http://application.gistory.me';
+
 const PaymentForm = props => {
   const [name, setName] = React.useState('');
   const [studentId, setStudentId] = React.useState('');
@@ -22,7 +24,7 @@ const PaymentForm = props => {
     };
     console.log(info);
     axios({
-      url: 'https://infoteam_api.samhome.xyz/api/application',
+      url: endpoint + '/api/application',
       method: 'POST',
       data: info,
     })
@@ -36,6 +38,7 @@ const PaymentForm = props => {
       })
       .catch(function(error) {
         window.alert('오류가 발생했습니다');
+        window.alert(error.response.data);
       });
   };
 
