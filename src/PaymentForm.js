@@ -22,7 +22,6 @@ const PaymentForm = props => {
       previous_dev_career: previousDevCareer,
       message: message,
     };
-    console.log(info);
     axios({
       url: endpoint + '/api/application',
       method: 'POST',
@@ -59,7 +58,6 @@ const PaymentForm = props => {
             value={name}
             onChange={e => {
               setName(e.target.value);
-              console.log(name);
             }}
             fullWidth
           />
@@ -72,7 +70,6 @@ const PaymentForm = props => {
             value={studentId}
             onChange={e => {
               setStudentId(e.target.value);
-              console.log(studentId);
             }}
             fullWidth
           />
@@ -85,7 +82,6 @@ const PaymentForm = props => {
             value={phoneNumber}
             onChange={e => {
               setPhoneNumber(e.target.value);
-              console.log(phoneNumber);
             }}
             fullWidth
           />
@@ -98,7 +94,6 @@ const PaymentForm = props => {
             value={previousDevCareer}
             onChange={e => {
               setPreviousDevCareer(e.target.value);
-              console.log(previousDevCareer);
             }}
             fullWidth
           />
@@ -111,7 +106,6 @@ const PaymentForm = props => {
             value={message}
             onChange={e => {
               setMessage(e.target.value);
-              console.log(message);
             }}
             fullWidth
           />
