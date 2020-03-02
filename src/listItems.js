@@ -67,17 +67,19 @@ export const secondListItems = (
 
 export const thirdListItems = (
   <div>
-    <ListItem button>
-      <ListItemIcon>
-        <i class="material-icons">drafts</i>
-      </ListItemIcon>
-      <ListItemText primary="지원하기" />
-    </ListItem>
-    <ListItem button onClick={sendEmail}>
-      <ListItemIcon>
-        <i class="material-icons">help_outline</i>
-      </ListItemIcon>
-      <ListItemText primary="문의사항" />
-    </ListItem>
+    <Link href="#fifth" color="inherit" underline="none">
+      <ListItem button>
+        <ListItemIcon>
+          <i class="material-icons">drafts</i>
+        </ListItemIcon>
+        <ListItemText primary="지원하기" />
+      </ListItem>
+      <ListItem button onClick={sendEmail}>
+        <ListItemIcon>
+          <i class="material-icons">help_outline</i>
+        </ListItemIcon>
+        <ListItemText primary="문의사항" />
+      </ListItem>
+    </Link>
   </div>
 );

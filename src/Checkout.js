@@ -93,6 +93,15 @@ export default function Checkout() {
     <>
       <CssBaseline />
       <Paper className={classes.paper}>
+        <span
+          id="fifth"
+          style={{
+            display: 'block',
+            height: 112,
+            marginTop: -112,
+            visibility: 'hidden',
+          }}
+        />
         <Typography component="h1" variant="h4" align="center">
           인포팀에 지원하기
         </Typography>
