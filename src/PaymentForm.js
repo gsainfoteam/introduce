@@ -18,6 +18,11 @@ export default function PaymentForm() {
     design: false,
   });
 
+  const [studentName, setStudentName] = React.useState("")
+  const [studentNumber, setStudentNumber] = React.useState("")
+  const [phoneNumber, setPhoneNumber] = React.useState("")
+  
+
   const handleChange = name => event => {
     setState({ ...state, [name]: event.target.checked });
   };
@@ -35,13 +40,13 @@ export default function PaymentForm() {
       </Typography>
       <Grid container spacing={3}>
         <Grid item xs={12} md={6}>
-          <TextField required id="Name" label="이름" fullWidth />
+          <TextField required id="Name" label="이름" fullWidth onchange={ (e) => {setStudentName(e.target.vaule)}} />
         </Grid>
         <Grid item xs={12} md={6}>
-          <TextField required id="studentNumber" label="학번" fullWidth />
+          <TextField required id="studentNumber" label="학번" fullWidth onchange={ (e) => {setStudentNumber(e.target.vaule)}}/>
         </Grid>
         <Grid item xs={12}>
-          <TextField required id="phone" label="휴대폰 번호" fullWidth />
+          <TextField required id="phone" label="휴대폰 번호" fullWidth onchange={ (e) => {setPhoneNumber(e.target.vaule)}}/>
         </Grid>
         <Grid item xs={12}>
           <TextField

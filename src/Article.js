@@ -87,7 +87,7 @@ export const fourthArticle = (
       <ListItemText primary="지스트 대학생 그룹에서는 학교 생활을 하며 도움이 될만한 정보를 공유하거나 동아리를 홍보하거나 물품 공동구매를 하는 등 다양한 활동이 이루어지고 있습니다." />
     </ListItem>
     <ListItem>
-      <ListItemText primary="'지스트 - 택시 잡는 대학생들' 페이지에서는 주로 광주송정역과 유스퀘어 버스터미널까지 동승할 학생들을 찾기 위해 사용됩니다." />
+      <ListItemText primary="'지스트 - 택시 잡는 대학생들' 페이지는 주로 광주송정역과 유스퀘어 버스터미널까지 택시에 동승할 학생들을 찾기 위해 사용됩니다." />
     </ListItem>
     <ListItem>
       <ListItemText primary="" />
