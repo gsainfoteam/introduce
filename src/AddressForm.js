@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import ListItem from '@material-ui/core/ListItem';
@@ -8,6 +9,11 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 
 const AddressForm = props => {
+  const [understood, setUnderstood] = React.useState(props.isUnderstading);
+  const handleClick = e => {
+    setUnderstood(!understood);
+  };
+
   return (
     <>
       <Typography variant="h6" gutterBottom>
@@ -55,15 +61,31 @@ const AddressForm = props => {
       <Grid item xs={12}>
         <FormControlLabel
           control={
-            <Checkbox
-              color="secondary"
-              name="saveCard"
-              onClick={props.nowUnderstand}
-            />
+            <Checkbox color="secondary" name="saveCard" onClick={handleClick} />
           }
           label="문행위/하우스/학생회와 공동지원이 불가능하다는 걸 이해했으며, 인포팀에 지원하겠습니다."
         />
       </Grid>
+      <div className={props.classes.buttons}>
+        {understood ? (
+          <>
+            <Button
+              variant="contained"
+              color="primary"
+              onClick={props.handleNext}
+              className={props.classes.button}
+            >
+              <i class="material-icons">arrow_forward</i>
+            </Button>
+          </>
+        ) : (
+          <>
+            <Button>
+              <i class="material-icons">close</i>
+            </Button>
+          </>
+        )}
+      </div>
     </>
   );
 };

@@ -7,6 +7,7 @@ import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+
 import AddressForm from './AddressForm';
 import PaymentForm from './PaymentForm';
 
@@ -52,49 +53,44 @@ const steps = ['유의사항', '지원서 양식'];
 export default function Checkout() {
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(0);
-  const [understood, setUnderstood] = React.useState(false);
 
-  function getStepContent(step) {
+  const getStepContent = step => {
     switch (step) {
       case 0:
-        return <AddressForm nowUnderstand={nowUnderstand} />;
+        return (
+          <AddressForm
+            handleNext={handleNext}
+            isUnderstadning={false}
+            classes={classes}
+          />
+        );
       case 1:
-        return <PaymentForm />;
+        return (
+          <PaymentForm
+            handleNext={handleNext}
+            handleBack={handleBack}
+            classes={classes}
+          />
+        );
       default:
         throw new Error('Unknown step');
     }
-  }
-
-  const sendMessage = () => {
-    console.log('아직 미완성');
   };
 
   const handleNext = () => {
-    if (activeStep === steps.length - 1) {
-      sendMessage();
-      setActiveStep(activeStep + 1);
-    } else {
-      setActiveStep(activeStep + 1);
-    }
+    setActiveStep(activeStep + 1);
   };
 
-  const goBack = () => {
-    setUnderstood(false);
+  const goFirst = () => {
     setActiveStep(0);
   };
 
   const handleBack = () => {
-    setUnderstood(false);
     setActiveStep(activeStep - 1);
   };
 
-  const nowUnderstand = () => {
-    setUnderstood(!understood);
-    console.log('제대로 전달 됨?');
-  };
-
   return (
-    <React.Fragment>
+    <>
       <CssBaseline />
       <Paper className={classes.paper}>
         <Typography component="h1" variant="h4" align="center">
@@ -107,53 +103,26 @@ export default function Checkout() {
             </Step>
           ))}
         </Stepper>
-        <React.Fragment>
+        <>
           {activeStep === steps.length ? (
-            <React.Fragment>
+            <>
               <Typography variant="h5" gutterBottom>
                 지원해 주셔서 감사합니다.
               </Typography>
               <Button
                 variant="contained"
                 color="primary"
-                onClick={goBack}
+                onClick={goFirst}
                 className={classes.button}
               >
                 처음으로 돌아가기
               </Button>
-            </React.Fragment>
+            </>
           ) : (
-            <React.Fragment>
-              {getStepContent(activeStep)}
-              <div className={classes.buttons}>
-                {activeStep !== 0 && (
-                  <Button onClick={handleBack} className={classes.button}>
-                    <i class="material-icons">arrow_back</i>
-                  </Button>
-                )}
-                {understood === true ? (
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    onClick={handleNext}
-                    className={classes.button}
-                  >
-                    {activeStep === steps.length - 1 ? (
-                      <i class="material-icons">send</i>
-                    ) : (
-                      <i class="material-icons">arrow_forward</i>
-                    )}
-                  </Button>
-                ) : (
-                  <Button>
-                    <i class="material-icons">close</i>
-                  </Button>
-                )}
-              </div>
-            </React.Fragment>
+            <>{getStepContent(activeStep)}</>
           )}
-        </React.Fragment>
+        </>
       </Paper>
-    </React.Fragment>
+    </>
   );
 }
