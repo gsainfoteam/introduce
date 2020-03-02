@@ -109,7 +109,7 @@ const DashBoard = () => {
   const handleDrawerClose = () => {
     setOpen(false);
   };
-  const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
+  // const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
   return (
     <div className={classes.root}>
@@ -166,15 +166,51 @@ const DashBoard = () => {
         <Container maxWidth="lg" className={classes.container}>
           <Grid container spacing={3}>
             <Grid item xs={12}>
+              <span
+                id="first"
+                style={{
+                  display: 'block',
+                  height: 112,
+                  marginTop: -112,
+                  visibility: 'hidden',
+                }}
+              />
               <Paper className={classes.paper}>{firstArticle}</Paper>
             </Grid>
             <Grid item xs={12}>
+              <span
+                id="second"
+                style={{
+                  display: 'block',
+                  height: 112,
+                  marginTop: -112,
+                  visibility: 'hidden',
+                }}
+              />
               <Paper className={classes.paper}>{secondArticle}</Paper>
             </Grid>
             <Grid item xs={12}>
+              <span
+                id="third"
+                style={{
+                  display: 'block',
+                  height: 112,
+                  marginTop: -112,
+                  visibility: 'hidden',
+                }}
+              />
               <Paper className={classes.paper}>{thirdArticle}</Paper>
             </Grid>
             <Grid item xs={12}>
+              <span
+                id="fourth"
+                style={{
+                  display: 'block',
+                  height: 112,
+                  marginTop: -112,
+                  visibility: 'hidden',
+                }}
+              />
               <Paper className={classes.paper}>{fourthArticle}</Paper>
             </Grid>
           </Grid>
