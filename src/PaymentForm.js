@@ -22,7 +22,7 @@ const PaymentForm = props => {
     };
     console.log(info);
     axios({
-      url: 'https://infoteam_api.samhome.xyz/api/aplication',
+      url: 'https://infoteam_api.samhome.xyz/api/application',
       method: 'POST',
       data: info,
     })
