@@ -9,6 +9,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import AddressForm from './AddressForm';
 import PaymentForm from './PaymentForm';
+import axios from 'axios';
 
 const useStyles = makeStyles(theme => ({
   appBar: {
@@ -54,31 +55,54 @@ export default function Checkout() {
   const [activeStep, setActiveStep] = React.useState(0);
   const [understood, setUnderstood] = React.useState(false);
 
-  function getStepContent(step) {
+  const getStepContent = step => {
     switch (step) {
       case 0:
         return <AddressForm nowUnderstand={nowUnderstand} />;
       case 1:
-        return <PaymentForm />;
+        return <PaymentForm updateApplyInfo={setApplyInfo} />;
       default:
         throw new Error('Unknown step');
     }
-  }
+  };
+
+  const [applyInfo, setApplyInfo] = React.useState({
+    name: '',
+    student_id: '',
+    phone_number: '',
+    previous_dev_career: '',
+    message: '',
+  });
 
   const sendMessage = () => {
-    console.log('아직 미완성');
+    axios({
+      url: 'https://infoteam_api.samhome.xyz/api/aplication',
+      method: 'POST',
+      data: applyInfo,
+    })
+      .then(function(response) {
+        if (response.data.success) {
+          window.alert('문자가 발송되었습니다');
+          handleNext();
+        } else {
+          window.alert(response.data.sms_error);
+          handleNext();
+        }
+      })
+      .catch(function(error) {
+        window.alert('오류가 발생했습니다');
+      });
   };
 
   const handleNext = () => {
     if (activeStep === steps.length - 1) {
       sendMessage();
-      setActiveStep(activeStep + 1);
     } else {
       setActiveStep(activeStep + 1);
     }
   };
 
-  const goBack = () => {
+  const goFirst = () => {
     setUnderstood(false);
     setActiveStep(0);
   };
@@ -90,7 +114,6 @@ export default function Checkout() {
 
   const nowUnderstand = () => {
     setUnderstood(!understood);
-    console.log('제대로 전달 됨?');
   };
 
   return (
@@ -116,7 +139,7 @@ export default function Checkout() {
               <Button
                 variant="contained"
                 color="primary"
-                onClick={goBack}
+                onClick={goFirst}
                 className={classes.button}
               >
                 처음으로 돌아가기
