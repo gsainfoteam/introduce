@@ -5,6 +5,8 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 
+const endpoint = 'http://application.gistory.me';
+
 const PaymentForm = props => {
   const [name, setName] = React.useState('');
   const [studentId, setStudentId] = React.useState('');
@@ -20,9 +22,8 @@ const PaymentForm = props => {
       previous_dev_career: previousDevCareer,
       message: message,
     };
-    console.log(info);
     axios({
-      url: 'https://infoteam_api.samhome.xyz/api/application',
+      url: endpoint + '/api/application',
       method: 'POST',
       data: info,
     })
@@ -36,6 +37,7 @@ const PaymentForm = props => {
       })
       .catch(function(error) {
         window.alert('오류가 발생했습니다');
+        window.alert(error.response.data);
       });
   };
 
@@ -56,7 +58,6 @@ const PaymentForm = props => {
             value={name}
             onChange={e => {
               setName(e.target.value);
-              console.log(name);
             }}
             fullWidth
           />
@@ -69,7 +70,6 @@ const PaymentForm = props => {
             value={studentId}
             onChange={e => {
               setStudentId(e.target.value);
-              console.log(studentId);
             }}
             fullWidth
           />
@@ -82,7 +82,6 @@ const PaymentForm = props => {
             value={phoneNumber}
             onChange={e => {
               setPhoneNumber(e.target.value);
-              console.log(phoneNumber);
             }}
             fullWidth
           />
@@ -95,7 +94,6 @@ const PaymentForm = props => {
             value={previousDevCareer}
             onChange={e => {
               setPreviousDevCareer(e.target.value);
-              console.log(previousDevCareer);
             }}
             fullWidth
           />
@@ -108,7 +106,6 @@ const PaymentForm = props => {
             value={message}
             onChange={e => {
               setMessage(e.target.value);
-              console.log(message);
             }}
             fullWidth
           />
