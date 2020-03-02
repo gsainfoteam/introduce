@@ -32,7 +32,7 @@ export const secondListItems = (
       <ListItemIcon>
         <i class="material-icons">public</i>
       </ListItemIcon>
-      <ListItemText primary="Gistory 관리" />
+      <ListItemText primary="GISTORY 관리" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
@@ -64,7 +64,7 @@ export const thirdListItems = (
       </ListItemIcon>
       <ListItemText primary="지원하기" />
     </ListItem>
-    <ListItem button onClick = {sendEmail}>
+    <ListItem button onClick={sendEmail}>
       <ListItemIcon>
         <i class="material-icons">help_outline</i>
       </ListItemIcon>
