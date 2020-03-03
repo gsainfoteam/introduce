@@ -7,7 +7,7 @@ import TextField from '@material-ui/core/TextField';
 
 const endpoint = 'http://application.gistory.me';
 const validator = {
-  name: /[가-힣]{1,4}/,
+  name: /^[가-힣]{2,4}$/,
   studentId: /20[012][0-9]{5}/,
   phoneNumber: /01[0-9]-?[0-9]{3,4}-?[0-9]{4}/,
 };
@@ -67,6 +67,7 @@ const PaymentForm = props => {
               setName(e.target.value);
             }}
             error={!validator['name'].test(name)}
+            helperText="4글자까지 적어주세요."
             fullWidth
           />
         </Grid>
