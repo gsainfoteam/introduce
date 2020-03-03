@@ -80,7 +80,7 @@ const AddressForm = props => {
           </>
         ) : (
           <>
-            <Button>
+            <Button className={props.classes.button}>
               <i class="material-icons">close</i>
             </Button>
           </>

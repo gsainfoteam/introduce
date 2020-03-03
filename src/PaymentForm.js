@@ -7,7 +7,7 @@ import TextField from '@material-ui/core/TextField';
 
 const endpoint = 'http://application.gistory.me';
 const validator = {
-  name: /^[가-힣]*$/,
+  name: /[가-힣]{1,4}/,
   studentId: /20[012][0-9]{5}/,
   phoneNumber: /01[0-9]-?[0-9]{3,4}-?[0-9]{4}/,
 };
@@ -18,11 +18,6 @@ const PaymentForm = props => {
   const [phoneNumber, setPhoneNumber] = React.useState('');
   const [previousDevCareer, setPreviousDevCareer] = React.useState('');
   const [message, setMessage] = React.useState('');
-
-  const validate = e => {
-    return true;
-    // console.log(validator[e.target.name].test(e.target.value));
-  };
 
   const sendMessage = () => {
     const info = {
@@ -71,7 +66,7 @@ const PaymentForm = props => {
             onChange={e => {
               setName(e.target.value);
             }}
-            error={validate}
+            error={!validator['name'].test(name)}
             fullWidth
           />
         </Grid>
@@ -85,7 +80,7 @@ const PaymentForm = props => {
             onChange={e => {
               setStudentId(e.target.value);
             }}
-            error={validate}
+            error={!validator['studentId'].test(studentId)}
             fullWidth
           />
         </Grid>
@@ -99,7 +94,7 @@ const PaymentForm = props => {
             onChange={e => {
               setPhoneNumber(e.target.value);
             }}
-            error={validate}
+            error={!validator['phoneNumber'].test(phoneNumber)}
             fullWidth
           />
         </Grid>
@@ -113,7 +108,6 @@ const PaymentForm = props => {
             onChange={e => {
               setPreviousDevCareer(e.target.value);
             }}
-            error={validate}
             fullWidth
           />
         </Grid>
@@ -127,7 +121,6 @@ const PaymentForm = props => {
             onChange={e => {
               setMessage(e.target.value);
             }}
-            error={validate}
             fullWidth
           />
         </Grid>
@@ -136,14 +129,24 @@ const PaymentForm = props => {
         <Button onClick={props.handleBack} className={props.classes.button}>
           <i class="material-icons">arrow_back</i>
         </Button>
-        <Button
-          variant="contained"
-          color="primary"
-          onClick={sendMessage}
-          className={props.classes.button}
-        >
-          <i class="material-icons">send</i>
-        </Button>
+        {validator['phoneNumber'].test(phoneNumber) &&
+        validator['studentId'].test(studentId) &&
+        validator['name'].test(name) ? (
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={sendMessage}
+            className={props.classes.button}
+          >
+            <i class="material-icons">send</i>
+          </Button>
+        ) : (
+          <>
+            <Button className={props.classes.button}>
+              <i class="material-icons">close</i>
+            </Button>
+          </>
+        )}
       </div>
     </>
   );
