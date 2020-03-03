@@ -6,6 +6,11 @@ import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 
 const endpoint = 'http://application.gistory.me';
+const validator = {
+  name: /^[가-힣]*$/,
+  studentId: /20[012][0-9]{5}/,
+  phoneNumber: /01[0-9]-?[0-9]{3,4}-?[0-9]{4}/,
+};
 
 const PaymentForm = props => {
   const [name, setName] = React.useState('');
@@ -13,6 +18,11 @@ const PaymentForm = props => {
   const [phoneNumber, setPhoneNumber] = React.useState('');
   const [previousDevCareer, setPreviousDevCareer] = React.useState('');
   const [message, setMessage] = React.useState('');
+
+  const validate = e => {
+    return true;
+    // console.log(validator[e.target.name].test(e.target.value));
+  };
 
   const sendMessage = () => {
     const info = {
@@ -22,6 +32,7 @@ const PaymentForm = props => {
       previous_dev_career: previousDevCareer,
       message: message,
     };
+
     axios({
       url: endpoint + '/api/application',
       method: 'POST',
@@ -56,9 +67,11 @@ const PaymentForm = props => {
             id="name"
             label="이름"
             value={name}
+            name="name"
             onChange={e => {
               setName(e.target.value);
             }}
+            error={validate}
             fullWidth
           />
         </Grid>
@@ -68,9 +81,11 @@ const PaymentForm = props => {
             id="student_id"
             label="학번"
             value={studentId}
+            name="studentId"
             onChange={e => {
               setStudentId(e.target.value);
             }}
+            error={validate}
             fullWidth
           />
         </Grid>
@@ -80,9 +95,11 @@ const PaymentForm = props => {
             id="phone_number"
             label="휴대폰 번호"
             value={phoneNumber}
+            name="phoneNumber"
             onChange={e => {
               setPhoneNumber(e.target.value);
             }}
+            error={validate}
             fullWidth
           />
         </Grid>
@@ -92,9 +109,11 @@ const PaymentForm = props => {
             id="previous_dev_career"
             label="개발에 참여하신 경험이 있으시면 적어주세요"
             value={previousDevCareer}
+            name="previousDevCareer"
             onChange={e => {
               setPreviousDevCareer(e.target.value);
             }}
+            error={validate}
             fullWidth
           />
         </Grid>
@@ -104,9 +123,11 @@ const PaymentForm = props => {
             id="message"
             label="하고싶은 말있으시면 적어주세요"
             value={message}
+            name="message"
             onChange={e => {
               setMessage(e.target.value);
             }}
+            error={validate}
             fullWidth
           />
         </Grid>
