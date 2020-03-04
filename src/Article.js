@@ -7,7 +7,6 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 
 import gistory from './gistory.png';
@@ -74,9 +73,6 @@ export const secondArticle = (
       <ListItem>
         <ListItemText primary="Synology RAID 저장소를 이용하고 있습니다." />
       </ListItem>
-      <ListItem>
-        <ListItemText primary="" />
-      </ListItem>
     </Grid>
   </Grid>
 );
@@ -90,7 +86,7 @@ export const thirdArticle = (
     </Grid>
     <Grid item xs={12} sm={3}>
       <Card>
-        <CardActionArea>
+        <CardActionArea href="https://www.gistory.me" target="_blank">
           <CardMedia
             component="img"
             alt="지스토리 메인 페이지"
@@ -104,16 +100,6 @@ export const thirdArticle = (
             </Typography>
           </CardContent>
         </CardActionArea>
-        <CardActions>
-          <Button
-            href="https://www.gistory.me"
-            target="_blank"
-            size="small"
-            color="primary"
-          >
-            방문하기
-          </Button>
-        </CardActions>
       </Card>
     </Grid>
     <Grid item xs={12} sm={9}>
@@ -145,7 +131,10 @@ export const fourthArticle = (
     </Grid>
     <Grid item xs={12} sm={3}>
       <Card>
-        <CardActionArea>
+        <CardActionArea
+          href="https://www.facebook.com/groups/giststudent/"
+          target="_blank"
+        >
           <CardMedia
             component="img"
             alt="지스트 대학생"
@@ -159,16 +148,6 @@ export const fourthArticle = (
             </Typography>
           </CardContent>
         </CardActionArea>
-        <CardActions>
-          <Button
-            href="https://www.facebook.com/groups/giststudent/"
-            target="_blank"
-            size="small"
-            color="primary"
-          >
-            방문하기
-          </Button>
-        </CardActions>
       </Card>
     </Grid>
     <Grid item xs={12} sm={9}>
