@@ -5,7 +5,6 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 
-const endpoint = 'http://application.gistory.me';
 const validator = {
   name: /^[가-힣]{2,4}$/,
   studentId: /20[012][0-9]{5}/,
@@ -20,7 +19,9 @@ const PaymentForm = props => {
   const [message, setMessage] = React.useState('');
 
   const sendMessage = () => {
+    const endpoint = 'http://application.gistory.me';
     const info = {
+      project: '3ba268251715486098d287b69542b3e2',
       name: name,
       student_id: studentId,
       phone_number: phoneNumber,
@@ -42,7 +43,6 @@ const PaymentForm = props => {
         }
       })
       .catch(function(error) {
-        window.alert('오류가 발생했습니다');
         window.alert(error.response.data);
       });
   };
