@@ -1,7 +1,7 @@
 {
   "name": "recruit",
   "homepage": "/",
-  "version": "0.2.5",
+  "version": "0.5.0",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.9.4",

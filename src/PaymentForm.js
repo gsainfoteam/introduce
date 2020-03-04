@@ -19,7 +19,7 @@ const PaymentForm = props => {
   const [message, setMessage] = React.useState('');
 
   const sendMessage = () => {
-    const endpoint = 'http://application.gistory.me';
+    const endpoint = 'https://application.gistory.me';
     const info = {
       project: '3ba268251715486098d287b69542b3e2',
       name: name,
@@ -43,7 +43,7 @@ const PaymentForm = props => {
         }
       })
       .catch(function(error) {
-        window.alert(error.response.data);
+        console.log(JSON.stringify(error));
       });
   };
 
