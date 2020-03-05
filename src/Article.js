@@ -67,10 +67,10 @@ export const secondArticle = (
         <ListItemText primary="인포팀에서는 총학생회의 저장 장소인 NAS를 관리하고 있습니다." />
       </ListItem>
       <ListItem>
-        <ListItemText primary="모든 문서의 원본을 저장하고 관리하며 자료의 임의 변경을 방지합니다." />
+        <ListItemText primary="모든 문서의 원본을 저장하고 관리하며 학생회와 다른 자치단체의 자료 위조 및 변조를 방지합니다." />
       </ListItem>
       <ListItem>
-        <ListItemText primary="Synology RAID 저장소를 이용하고 있습니다." />
+        <ListItemText primary="Synology NAS 저장소를 이용하고 있습니다." />
       </ListItem>
     </Grid>
   </Grid>
@@ -125,7 +125,7 @@ export const fourthArticle = (
   <Grid container spacing={3}>
     <Grid item xs={12}>
       <Typography component="h1" variant="h4" align="center">
-        페이스북 커뮤니티
+        페이스북 커뮤니티 운영
       </Typography>
     </Grid>
     <Grid item xs={12} sm={3}>
@@ -157,7 +157,7 @@ export const fourthArticle = (
         <ListItemText primary="Facebook 비공개 그룹 '지스트 대학생'과 '지스트 - 택시 잡는 대학생들' 페이지를 운영하고 있습니다." />
       </ListItem>
       <ListItem>
-        <ListItemText primary="지스트 대학생 그룹에서는 학교 생활을 하며 도움이 될만한 정보를 공유하거나 동아리를 홍보하거나 물품 공동구매를 하는 등 다양한 활동이 이루어지고 있습니다." />
+        <ListItemText primary="지스트 대학생 그룹에서는 학교 생활을 하며 도움이 될만한 정보를 공유하거나 도움이 될 만한 정보를 공유하거나, 동아리 홍보, 물품 공동구매 등 다양한 활동이 이루어지고 있습니다." />
       </ListItem>
       <ListItem>
         <ListItemText primary="'지스트 - 택시 잡는 대학생들' 페이지는 주로 광주송정역과 유스퀘어 버스터미널까지 택시에 동승할 학생들을 찾기 위해 사용됩니다." />

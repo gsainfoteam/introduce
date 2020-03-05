@@ -63,7 +63,7 @@ const AddressForm = props => {
           control={
             <Checkbox color="secondary" name="saveCard" onClick={handleClick} />
           }
-          label="문행위/하우스/학생회와 공동지원이 불가능하다는 걸 이해했으며, 인포팀에 지원하겠습니다."
+          label="문화행사위원회/하우스/학생회와 공동지원이 불가능하다는 걸 이해했으며, 인포팀에 지원하겠습니다."
         />
       </Grid>
       <div className={props.classes.buttons}>
