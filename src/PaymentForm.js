@@ -43,7 +43,7 @@ const PaymentForm = props => {
         }
       })
       .catch(function(error) {
-        console.log(JSON.stringify(error));
+        window.alert(JSON.stringify(error));
       });
   };
 
