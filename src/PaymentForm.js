@@ -44,12 +44,15 @@ const PaymentForm = props => {
       })
       .catch(function(error) {
         const errorInfo = error.response.data.error;
-        switch (errorInfo.data.error) {
+        switch (errorInfo) {
           case 'application_not_opened':
-            window.alert('지원 기간이 아직 아닙니다.');
+            window.alert('아직 지원 기간이 아닙니다.');
             break;
           case 'application_closed':
-            window.alert('지원 기간이 지났습니다.');
+            window.alert('지원이 마감되었습니다');
+            break;
+          case 'sutdent_id_from_not_valid':
+            window.alert('학번이 잘못되었습니다.');
             break;
           case 'phone_number_form_not_valid':
             window.alert('휴대전화 서식이 잘못되었습니다.');
@@ -60,7 +63,7 @@ const PaymentForm = props => {
           case 'sms_error':
             window.alert('SMS 전송과정에서 오류가 발생하였습니다.');
             break;
-          case 'unknow_error':
+          case 'unknown_error':
             window.alert('알 수 없는 에러가 발생하였습니다.');
             break;
           default:

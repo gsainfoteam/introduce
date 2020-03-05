@@ -114,9 +114,6 @@ export const thirdArticle = (
       <ListItem>
         <ListItemText primary="GIST 이메일을 통해 인증이 가능합니다." />
       </ListItem>
-      <ListItem>
-        <ListItemText primary="" />
-      </ListItem>
     </Grid>
   </Grid>
 );
@@ -151,19 +148,13 @@ export const fourthArticle = (
     </Grid>
     <Grid item xs={12} sm={9}>
       <ListItem>
-        <ListItemText primary="" />
-      </ListItem>
-      <ListItem>
         <ListItemText primary="Facebook 비공개 그룹 '지스트 대학생'과 '지스트 - 택시 잡는 대학생들' 페이지를 운영하고 있습니다." />
       </ListItem>
       <ListItem>
-        <ListItemText primary="지스트 대학생 그룹에서는 학교 생활을 하며 도움이 될만한 정보를 공유하거나 도움이 될 만한 정보를 공유하거나, 동아리 홍보, 물품 공동구매 등 다양한 활동이 이루어지고 있습니다." />
+        <ListItemText primary="지스트 대학생 그룹에서는 학교 생활을 하며 도움이 될만한 정보를 공유하거나 동아리 홍보, 물품 공동구매 등 다양한 활동이 이루어지고 있습니다." />
       </ListItem>
       <ListItem>
         <ListItemText primary="'지스트 - 택시 잡는 대학생들' 페이지는 주로 광주송정역과 유스퀘어 버스터미널까지 택시에 동승할 학생들을 찾기 위해 사용됩니다." />
-      </ListItem>
-      <ListItem>
-        <ListItemText primary="" />
       </ListItem>
     </Grid>
   </Grid>
