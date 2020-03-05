@@ -43,7 +43,31 @@ const PaymentForm = props => {
         }
       })
       .catch(function(error) {
-        window.alert(JSON.stringify(error));
+        const errorInfo = error.response.data.error;
+        switch (errorInfo.data.error) {
+          case 'application_not_opened':
+            window.alert('지원 기간이 아직 아닙니다.');
+            break;
+          case 'application_closed':
+            window.alert('지원 기간이 지났습니다.');
+            break;
+          case 'phone_number_form_not_valid':
+            window.alert('휴대전화 서식이 잘못되었습니다.');
+            break;
+          case 'duplicate_input_data':
+            window.alert('학번이나 휴대폰 번호가 중복되었습니다.');
+            break;
+          case 'sms_error':
+            window.alert('SMS 전송과정에서 오류가 발생하였습니다.');
+            break;
+          case 'unknow_error':
+            window.alert('알 수 없는 에러가 발생하였습니다.');
+            break;
+          default:
+            window.alert('에러가 발생했습니다.');
+            // 프론트 단에서 에러가 발생해서 아예 전송이 안되거나 할때
+            break;
+        }
       });
   };
 
