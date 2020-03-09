@@ -2,11 +2,13 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Grid from '@material-ui/core/Grid';
+import Divider from '@material-ui/core/Divider';
 
 import gistory from './gistory.png';
 import facebook from './facebook.png';
@@ -20,9 +22,6 @@ export const firstArticle = (
       </Typography>
     </Grid>
     <Grid item xs={12}>
-      <ListItem>
-        <ListItemText primary="" />
-      </ListItem>
       <ListItem>
         <ListItemText primary="인포팀은 지스트대학 총학생회 특별기구입니다." />
       </ListItem>
@@ -60,9 +59,6 @@ export const secondArticle = (
       </Card>
     </Grid>
     <Grid item xs={12} sm={9}>
-      <ListItem>
-        <ListItemText primary="" />
-      </ListItem>
       <ListItem>
         <ListItemText primary="인포팀에서는 총학생회의 저장 장소인 NAS를 관리하고 있습니다." />
       </ListItem>
@@ -102,9 +98,6 @@ export const thirdArticle = (
       </Card>
     </Grid>
     <Grid item xs={12} sm={9}>
-      <ListItem>
-        <ListItemText primary="" />
-      </ListItem>
       <ListItem>
         <ListItemText primary="GISTORY는 지스트 대학생과 대학원생 모두가 이용할 수 있는 커뮤니티입니다." />
       </ListItem>
@@ -155,6 +148,39 @@ export const fourthArticle = (
       </ListItem>
       <ListItem>
         <ListItemText primary="'지스트 - 택시 잡는 대학생들' 페이지는 주로 광주송정역과 유스퀘어 버스터미널까지 택시에 동승할 학생들을 찾기 위해 사용됩니다." />
+      </ListItem>
+    </Grid>
+  </Grid>
+);
+
+export const fifthArticle = (
+  <Grid container spacing={3}>
+    <Grid item xs={12}>
+      <Typography component="h1" variant="h4" align="center">
+        초보자는요?
+      </Typography>
+    </Grid>
+    <Grid item xs={12}>
+      <ListItem>
+        <ListItemIcon>
+          <i class="material-icons">question_answer</i>
+        </ListItemIcon>
+        <ListItemText primary="저는 프로그래밍이나 디자인 하나도 모르는 알못인데 가능할까요?" />
+      </ListItem>
+      <ListItem>
+        <ListItemIcon></ListItemIcon>
+        <ListItemText primary="일단 오세요." />
+      </ListItem>
+      <Divider />
+      <ListItem>
+        <ListItemIcon>
+          <i class="material-icons">question_answer</i>
+        </ListItemIcon>
+        <ListItemText primary="진짜 아무것도 모르는데요?" />
+      </ListItem>
+      <ListItem>
+        <ListItemIcon></ListItemIcon>
+        <ListItemText primary="일단 오시면 됩니다. 인포팀은 내부에서 서로 배우고 경험을 쌓으실 수 있습니다." />
       </ListItem>
     </Grid>
   </Grid>

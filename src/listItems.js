@@ -70,16 +70,24 @@ export const thirdListItems = (
     <Link href="#fifth" color="inherit" underline="none">
       <ListItem button>
         <ListItemIcon>
+          <i class="material-icons">question_answer</i>
+        </ListItemIcon>
+        <ListItemText primary="초보자는요?" />
+      </ListItem>
+    </Link>
+    <Link href="#sixth" color="inherit" underline="none">
+      <ListItem button>
+        <ListItemIcon>
           <i class="material-icons">drafts</i>
         </ListItemIcon>
         <ListItemText primary="지원하기" />
       </ListItem>
-      <ListItem button onClick={sendEmail}>
-        <ListItemIcon>
-          <i class="material-icons">help_outline</i>
-        </ListItemIcon>
-        <ListItemText primary="문의사항" />
-      </ListItem>
     </Link>
+    <ListItem button onClick={sendEmail}>
+      <ListItemIcon>
+        <i class="material-icons">help_outline</i>
+      </ListItemIcon>
+      <ListItemText primary="문의사항" />
+    </ListItem>
   </div>
 );

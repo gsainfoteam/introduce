@@ -94,7 +94,7 @@ export default function Checkout() {
       <CssBaseline />
       <Paper className={classes.paper}>
         <span
-          id="fifth"
+          id="sixth"
           style={{
             display: 'block',
             height: 112,
