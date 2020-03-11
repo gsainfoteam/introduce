@@ -25,8 +25,8 @@ const PaymentForm = props => {
       name: name,
       student_id: studentId,
       phone_number: phoneNumber,
-      previous_dev_career: previousDevCareer,
-      message: message,
+      '개발에 참여하신 경험이 있으시면 적어주세요': previousDevCareer,
+      '하고싶은 말있으시면 적어주세요': message,
     };
 
     axios({
