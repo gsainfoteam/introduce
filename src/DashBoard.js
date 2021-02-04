@@ -13,7 +13,6 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 
 import Footer from './Footer';
-import Checkout from './Checkout';
 import { firstListItems, secondListItems, thirdListItems } from './listItems';
 import {
   firstArticle,
@@ -226,12 +225,6 @@ const DashBoard = () => {
               />
               <Paper className={classes.paper}>{fifthArticle}</Paper>
             </Grid>
-          </Grid>
-
-          <Grid item xs={12}>
-            <Paper className="application">
-              <Checkout />
-            </Paper>
           </Grid>
           <Box pt={4}>
             <Footer />
