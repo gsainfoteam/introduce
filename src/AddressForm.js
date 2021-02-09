@@ -38,7 +38,7 @@ const AddressForm = props => {
         <ListItemIcon>
           <i class="material-icons">keyboard_arrow_right</i>
         </ListItemIcon>
-        <ListItemText primary="20학번이 아니어도 환영합니다." />
+        <ListItemText primary="21학번이 아니어도 환영합니다." />
       </ListItem>
       <ListItem>
         <ListItemIcon>
