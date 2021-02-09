@@ -205,11 +205,11 @@ export const sixthArticle = (
         <ListItemIcon>
           <i class="material-icons">question_answer</i>
         </ListItemIcon>
-        <ListItemText primary="저는 프로그래밍이나 디자인 하나도 모르는 알못인데 가능할까요?" />
+        <ListItemText primary="저는 프로그래밍이나 디자인에 대한 지식조차 전무한 초보인데 가능할까요?" />
       </ListItem>
       <ListItem>
         <ListItemIcon></ListItemIcon>
-        <ListItemText primary="일단 오세요." />
+        <ListItemText primary="용기를 가지고 지원해보세요!" />
       </ListItem>
       <Divider />
       <ListItem>
