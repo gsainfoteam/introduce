@@ -147,10 +147,10 @@ export const fourthArticle = (
     </Grid>
     <Grid item xs={12} sm={9}>
       <ListItem>
-        <ListItemText primary="인포팀은 Facebook 비공개 그룹 '지스트 대학생'과 '지스트 - 택시 잡는 대학생들' 페이지를 운영하고 있습니다." />
+        <ListItemText primary="인포팀은 Facebook 비공개 그룹 '지스트 대학생'과 공개 그룹 '지스트 - 택시 잡는 대학생들'을 운영하고 있습니다." />
       </ListItem>
       <ListItem>
-        <ListItemText primary="지스트 대학생 그룹에는 지스트 재학생 신분이 확인된 분들만 가입 가능하며 페이지 내에서 학교 생활을 하며 도움이 될만한 정보를 공유하거나 동아리 홍보, 물품 나눔 및 판매 등 다양한 활동이 이루어지고 있습니다." />
+        <ListItemText primary="'지스트 대학생' 페이지에는 지스트 재학생 신분이 확인된 분들만 가입 가능하며 페이지 내에서 학교 생활을 하며 도움이 될만한 정보를 공유하거나 동아리 홍보, 물품 나눔 및 판매 등 다양한 활동이 이루어지고 있습니다." />
       </ListItem>
       <ListItem>
         <ListItemText primary="'지스트 - 택시 잡는 대학생들' 페이지는 택시에 동승할 학생들을 찾기 위해 사용됩니다. 주로 [ GIST ] <-> [ 광주 송정역 / 유스퀘어 버스터미널 / 광주 공항 ] 경로가 자주 이용됩니다." />
