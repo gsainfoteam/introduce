@@ -28,17 +28,17 @@ export const secondListItems = (
     <Link href="#second" color="inherit" underline="none">
       <ListItem button>
         <ListItemIcon>
-          <i class="material-icons">developer_board</i>
+          <i class="material-icons">public</i>
         </ListItemIcon>
-        <ListItemText primary="NAS 관리" />
+        <ListItemText primary="GISTORY 관리" />
       </ListItem>
     </Link>
     <Link href="#third" color="inherit" underline="none">
       <ListItem button>
         <ListItemIcon>
-          <i class="material-icons">public</i>
+          <i class="material-icons">developer_board</i>
         </ListItemIcon>
-        <ListItemText primary="GISTORY 관리" />
+        <ListItemText primary="리크루팅 페이지" />
       </ListItem>
     </Link>
     <Link href="#fourth" color="inherit" underline="none">
@@ -62,12 +62,20 @@ export const secondListItems = (
         <ListItemText primary="페이스북 커뮤니티" />
       </ListItem>
     </Link>
+    <Link href="#fifth" color="inherit" underline="none">
+      <ListItem button>
+        <ListItemIcon>
+          <i class="material-icons">developer_board</i>
+        </ListItemIcon>
+        <ListItemText primary="NAS 관리" />
+      </ListItem>
+    </Link>
   </div>
 );
 
 export const thirdListItems = (
   <div>
-    <Link href="#fifth" color="inherit" underline="none">
+    <Link href="#sixth" color="inherit" underline="none">
       <ListItem button>
         <ListItemIcon>
           <i class="material-icons">question_answer</i>
@@ -75,7 +83,7 @@ export const thirdListItems = (
         <ListItemText primary="초보자는요?" />
       </ListItem>
     </Link>
-    <Link href="#sixth" color="inherit" underline="none">
+    <Link href="#seventh" color="inherit" underline="none">
       <ListItem button>
         <ListItemIcon>
           <i class="material-icons">drafts</i>
