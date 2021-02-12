@@ -48,15 +48,19 @@ const AddressForm = props => {
       </ListItem>
       <ListItem>
         <ListItemIcon></ListItemIcon>
-        <ListItemText primary="Python 및 웹 프로그래밍 경험이 있으신 분" />
+        <ListItemText primary="· Python 및 웹 프로그래밍 경험이 있으신 분" />
       </ListItem>
       <ListItem>
         <ListItemIcon></ListItemIcon>
-        <ListItemText primary="성실하게 1~2년 동안 꾸준히 참가 가능하신 분" />
+        <ListItemText primary="· 안드로이드 앱 개발 경험이 있으신 분" />
       </ListItem>
       <ListItem>
         <ListItemIcon></ListItemIcon>
-        <ListItemText primary="디자인 경험이 있거나 디자인이 가능하신 분" />
+        <ListItemText primary="· 성실하게 1~2년 동안 꾸준히 참가 가능하신 분" />
+      </ListItem>
+      <ListItem>
+        <ListItemIcon></ListItemIcon>
+        <ListItemText primary="· 디자인 경험이 있거나 디자인이 가능하신 분" />
       </ListItem>
       <Grid item xs={12}>
         <FormControlLabel
