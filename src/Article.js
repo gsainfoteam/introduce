@@ -197,10 +197,21 @@ export const sixthArticle = (
   <Grid container spacing={3}>
     <Grid item xs={12}>
       <Typography component="h1" variant="h4" align="center">
-        초보자는요?
+        질문 있어요!
       </Typography>
     </Grid>
     <Grid item xs={12}>
+      <ListItem>
+        <ListItemIcon>
+          <i class="material-icons">question_answer</i>
+        </ListItemIcon>
+        <ListItemText primary="21학번이 아닌데 가능할까요?" />
+      </ListItem>
+      <ListItem>
+        <ListItemIcon></ListItemIcon>
+        <ListItemText primary="21학번이 아니어도 환영합니다." />
+      </ListItem>
+      <Divider />
       <ListItem>
         <ListItemIcon>
           <i class="material-icons">question_answer</i>
@@ -226,3 +237,26 @@ export const sixthArticle = (
   </Grid>
 );
 
+export const seventhArticle = (
+  <Grid container spacing={3}>
+    <Grid item xs={12}>
+      <Typography component="h1" variant="h4" align="center">
+        우대사항
+      </Typography>
+    </Grid>
+    <Grid item xs={12}>
+      <ListItem>
+        <ListItemIcon></ListItemIcon>
+        <ListItemText primary="Python, Android 및 웹 프로그래밍 경험이 있으신 분" />
+      </ListItem>
+      <ListItem>
+        <ListItemIcon></ListItemIcon>
+        <ListItemText primary="성실하게 1~2년 동안 꾸준히 참가 가능하신 분" />
+      </ListItem>
+      <ListItem>
+        <ListItemIcon></ListItemIcon>
+        <ListItemText primary="디자인 경험이 있거나 디자인이 가능하신 분" />
+      </ListItem>
+    </Grid>
+  </Grid>
+);

@@ -21,6 +21,7 @@ import {
   fourthArticle,
   fifthArticle,
   sixthArticle,
+  seventhArticle,
 } from './Article';
 
 const drawerWidth = 240;
@@ -237,6 +238,18 @@ const DashBoard = () => {
                 }}
               />
               <Paper className={classes.paper}>{sixthArticle}</Paper>
+            </Grid>
+            <Grid item xs={12}>
+              <span
+                id="seventh"
+                style={{
+                  display: 'block',
+                  height: 112,
+                  marginTop: -112,
+                  visibility: 'hidden',
+                }}
+              />
+              <Paper className={classes.paper}>{seventhArticle}</Paper>
             </Grid>
           </Grid>
           <Box pt={4}>

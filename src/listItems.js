@@ -86,9 +86,9 @@ export const thirdListItems = (
     <Link href="#seventh" color="inherit" underline="none">
       <ListItem button>
         <ListItemIcon>
-          <i class="material-icons">drafts</i>
+          <i class="material-icons">question_answer</i>
         </ListItemIcon>
-        <ListItemText primary="지원하기" />
+        <ListItemText primary="우대사항" />
       </ListItem>
     </Link>
     <ListItem button onClick={sendEmail}>
