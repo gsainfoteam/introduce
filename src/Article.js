@@ -13,7 +13,6 @@ import Divider from '@material-ui/core/Divider';
 import gistory from './gistory.png';
 import facebook from './facebook.png';
 import nas from './NAS.jpg';
-import recruit from './recruit.jpg';
 
 export const firstArticle = (
   <Grid container spacing={3}>
@@ -24,10 +23,10 @@ export const firstArticle = (
     </Grid>
     <Grid item xs={12}>
       <ListItem>
-        <ListItemText primary="인포팀은 지스트대학 총학생회 특별기구입니다." />
+        <ListItemText primary="인포팀은 지스트대학 총학생회 산하 특별기구입니다." />
       </ListItem>
       <ListItem>
-        <ListItemText primary="주로 Python과 HTML, CSS, Javascript 등을 사용하여 지스트 학생들에게 도움이 되는 웹 서비스를 개발 및 관리합니다. 대표적으로 GISTORY와 자치회 · 동아리 신입 부원 모집  및 관리 페이지가 있습니다." />
+        <ListItemText primary="주로 Python과 HTML, CSS, Javascript 등을 사용하여 지스트 학생들에게 도움이 되는 웹 서비스를 개발 및 관리합니다. 대표적으로 GISTORY와 자치회 · 동아리 신입 부원 모집 및 관리 페이지가 있습니다." />
       </ListItem>
       <ListItem>
         <ListItemText primary="또한 '지스트 대학생'과 '지스트 - 택시 잡는 대학생들' 페이스북 페이지를 운영하고 총학생회의 저장 장소인 NAS를 관리하고 있습니다." />
@@ -87,25 +86,7 @@ export const thirdArticle = (
         리크루팅 페이지 관리
       </Typography>
     </Grid>
-    <Grid item xs={12} sm={3}>
-      <Card>
-        <CardActionArea href="https://recruit.gistory.me/" target="_blank">
-          <CardMedia
-            component="img"
-            alt="리크루팅페이지"
-            height="140"
-            src={recruit}
-            title="리크루팅"
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
-              리크루팅 관리 페이지
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-      </Card>
-    </Grid>
-    <Grid item xs={12} sm={9}>
+    <Grid item xs={12}>
       <ListItem>
         <ListItemText primary="인포팀은 자치회와 동아리 등의 단체에서 신입 부원을 모집하고 관리하기 용이하도록 리크루팅 웹페이지를 개발하였습니다." />
       </ListItem>
@@ -247,7 +228,7 @@ export const seventhArticle = (
     <Grid item xs={12}>
       <ListItem>
         <ListItemIcon></ListItemIcon>
-        <ListItemText primary="Python, Android 및 웹 프로그래밍 경험이 있으신 분" />
+        <ListItemText primary="Python, 및 웹 프로그래밍 경험이 있으신 분" />
       </ListItem>
       <ListItem>
         <ListItemIcon></ListItemIcon>
